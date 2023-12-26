@@ -1,0 +1,97 @@
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: #151812;
+    }
+    span.long {
+        width: 36px;
+    }
+}
+
+.menu {
+    position: fixed; 
+    top: 0;
+    left: -100%; /* Касается особенностей появления блока на странице */
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0; 
+    transition: 0.6s all;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1; 
+    }
+    &__block {
+        position: relative;
+        // left: -100%;
+        width: 345px;
+        background-color: $main-color;
+        height: 100vh;
+        padding-top: 180px;
+        padding-left: 40px;
+        transition: 0.6s all;
+        z-index: 10;
+    }
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+    &__list {
+        list-style-type: none;
+    }
+    &__link {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        a {
+            color: #fff;
+            --s: 0.1em; /* Толщина линии */
+            --c: #fff; /* Цвет */
+            padding-bottom: var(--s);
+            background: 
+              linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+              linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+            -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+            transition: 0.6s;
+            &:hover {
+                text-decoration: none;
+                --_p: 100%;
+            }
+        }
+    }
+    &__socials {
+        position: absolute;
+        bottom: 50px;
+        left: 50%; /* Выравнивание блока по горизонтали родительского */
+        transform: translateX(-50%); /* Выравнивание блока по горизонтали родительского */
+        width: 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0.6; 
+    }
+}

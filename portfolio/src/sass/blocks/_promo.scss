@@ -1,0 +1,62 @@
+.promo {
+    position: relative;
+    min-height: 100vh; /* Высота блока равна высоте экрана */
+    &__content {
+        max-width: 768px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__title {
+        color: #fff;
+        font-size: 56px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__btns {
+        margin: 50px auto 0;
+        display: flex;
+        max-width: 330px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    &__link {
+        width: 100%;
+        background: transparent;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &__socials {
+        position: absolute;
+        top: 50%;
+        margin: 0;
+        border: none;
+        transform: translateY(-50%);
+    }
+    &__social-link {
+        display: block;
+        padding: 12px;
+        list-style: none;
+        cursor: pointer;
+        img {
+          width: 34px;
+          border-radius: 50%;
+        }
+    }
+}

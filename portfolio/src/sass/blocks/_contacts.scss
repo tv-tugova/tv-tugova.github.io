@@ -1,0 +1,98 @@
+.contacts {
+    padding: 120px 0 90px;
+    &__title, &__subtitle, &__text  {
+        text-align: center;
+    }
+    &__wrapper {
+        padding: 20px 275px 0 275px;
+    }
+    &__socials {
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__link {
+        margin-right: 20px;
+        img {
+            max-width: 34px;
+            max-height: 34px;
+        }
+    }
+    &__form {
+        margin-top: 30px;
+        display: grid;
+        grid-template-rows: 45px 190px 45px;
+        grid-template-columns: 280px 280px;
+        justify-content: space-between;
+        row-gap: 30px;
+        label {
+            display: block;
+            position: absolute; /* Текст будет подставляться разный, поэтому его лучше выравнивать с помощью padding, а не margin */
+            top: -9px;
+            left: 14px;
+            height: 18px;
+            padding: 0 6px;
+            background-color: #fff;
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+    }
+    &__input {
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+    }
+    &__textarea {
+        position: relative;
+        grid-column: 1 / 3;
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none; /* Пропадает возможность растянуть область */
+            padding: 12px 20px;
+            font-size: 12px;
+        }
+    }
+    &__triggers {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__privacy {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        input {
+            margin-right: 10px;
+        }
+        span {
+            a {
+                color: $main-color;
+            }
+        }
+    }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        display: block;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        height: 18px;
+        padding: 0;
+        background-color: #fff;
+        border: none;
+        color: red;
+        font-size: 13px; 
+        &#text-error {
+            top: 190px; 
+        }
+    }
+}

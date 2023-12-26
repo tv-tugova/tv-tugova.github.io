@@ -1,0 +1,32 @@
+.privacy {
+    padding: 30px;
+    &__header {
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    &__title {
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    &__descr {
+        margin-bottom: 15px;
+        span {
+            font-weight: 700;
+        }
+    }
+    &__items {
+        padding-left: 30px;
+        list-style-type: none;
+    }
+    &__item {
+        span {
+            font-weight: 700;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 400px 800px;
+        grid-template-rows: repeat(4, auto);
+        margin-bottom: 15px;
+    }
+}
